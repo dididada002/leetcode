@@ -1,5 +1,6 @@
 package com.jt.rabbitmq.exchange.derect;
 
+import com.jt.rabbitmq.utils.RabbitMQUtil;
 import com.rabbitmq.client.*;
 
 import java.io.IOException;
@@ -11,16 +12,8 @@ import java.util.concurrent.TimeoutException;
  */
 public class Consumer4DirectExchange {
     public static void main(String[] args)  throws IOException, TimeoutException, InterruptedException {
-        //创建一个连接工厂，并进行配置
-        ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("192.168.244.128");
-        factory.setPort(5672);
-        factory.setVirtualHost("/");
-//        factory.setUsername("jingteng");
-//        factory.setPassword("jingteng");
-
         //通过连接工厂创建连接
-        Connection connection = factory.newConnection();
+        Connection connection = RabbitMQUtil.getConnetion();
 
         //通过连接创建一个channel
         Channel channel = connection.createChannel();

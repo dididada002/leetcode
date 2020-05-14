@@ -8,6 +8,7 @@ import java.nio.channels.FileChannel;
 /**
  * @author: jingteng
  * @date: 2020/5/14 17:32
+ * 输出流
  */
 public class NioFileChanner01 {
     public static void main(String[] args) throws IOException {

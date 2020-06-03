@@ -16,7 +16,7 @@ public class RabbitMQUtil {
     static {
         factory = new ConnectionFactory();
         //创建一个连接工厂，并进行配置
-        factory.setHost("192.168.244.128");
+        factory.setHost("192.168.244.132");
         factory.setPort(5672);
         factory.setVirtualHost("/");
 //        factory.setUsername("jingteng");
